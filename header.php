@@ -22,21 +22,10 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/header.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/footer.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/elements.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/indice.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/escuela.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/fuentes.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/alerts.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/widgets.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/comments.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/galeria.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/niveles.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/contact-form.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/relacionados.css">
 <?php if(is_front_page()):?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/portada.css">
-<?php elseif($post->ID === 1398):?>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/listado-guias.css">
 <?php endif; ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/cp.css">
     <!-- Google Tag Manager -->
     <script>
     (function(w, d, s, l, i) {
@@ -64,42 +53,40 @@
     <!-- End Google Tag Manager (noscript) -->
 
 
-		<?php 
-			if($post->post_type == 'escuela'): 
-				get_template_part('post_templates/widgets/markups/school');
-			endif; 
-		?>
-
     <header>
-        <nav class="navbar navbar-expand-lg border-bottom shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <img class="logo" src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>"
-                        alt="<?php bloginfo( 'name' ); ?>" />
-                </a>
+    <nav class="navbar navbar-expand-lg border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <img class="logo" src="<?php echo get_template_directory_uri() . '/images/logo.png'; ?>" alt="<?php bloginfo( 'name' ); ?>" />
+            </a>
 
-                <div class="navbar-toggler hamburger_wrapper">
-                    <div id="lc_hamburger" class="navbar-toggler" tabindex="1" role="button"
-                        onclick="hamburger_toggle();">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
+<!-- buscador codigos postales -->
+            <?php echo do_shortcode('[CP_buscador_codigos_postales]');?>
 
-                <div class="openLg" id="lc_nav-menu">
-                    <?php wp_nav_menu(array(
-	                       'theme_location' => 'header',
-	                       'container' => false,
-	                       'walker' => new LCMN_Walker(),
-	                       'items_wrap' => '<ul id="%1$s" class="navbar-nav ml-auto">%3$s</ul>') )?>
+           <!-- <div class="navbar-toggler hamburger_wrapper">
+                <div id="lc_hamburger" class="navbar-toggler" tabindex="1" role="button" onclick="hamburger_toggle();">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
-        </nav>
-    </header>
 
-    <script type="text/javascript">
-    function hamburger_toggle() {
+      <div class="openLg" id="lc_nav-menu">
+
+        <?php wp_nav_menu(array(
+                           'theme_location' => 'header',
+                           'container' => false,
+                           'walker' => new LCMN_Walker(),
+                           'items_wrap' => '<ul id="%1$s" class="navbar-nav ml-auto">%3$s</ul>') )?>
+      </div>
+  -->
+    </div>
+  </nav>
+</header>
+
+<script type="text/javascript">
+    
+    function hamburger_toggle(){
         var element = document.getElementById("lc_hamburger");
         element.classList.toggle("close");
 
@@ -107,9 +94,5 @@
         element.classList.toggle("now-active");
 
     }
-    </script>
 
-    <button style="display: none" class="scroll-to-top">
-        <div class="btnUp"><img src="<?php echo get_template_directory_uri() . '/images/arrowTop.svg'; ?>" alt="TOP" />
-        </div>
-    </button>
+</script>

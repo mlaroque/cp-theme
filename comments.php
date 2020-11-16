@@ -21,11 +21,8 @@ if ( post_password_required() ) {
 }
 ?>
 <div class="container-fluid lc_comments marPad0">
-	<div class="row">
-		<div class="col-12 marPad0 books">
-			
-		</div>
-	</div>
+	
+	
 			<h2 class="text-center">¿TIENES PREGUNTAS?</h2>
 
 	<div class="container">

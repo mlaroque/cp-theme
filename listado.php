@@ -2,7 +2,7 @@
  
 <?php get_header();  ?>
 
-<div class="container">
+<div class="container container-top">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <?php get_template_part("post_templates/widgets/breadcrumbs"); ?>
@@ -20,12 +20,6 @@
 
 <?php
 
-	if($post->ID == 91){
-		get_template_part("listados/escuelas");
-	}
-  elseif($post->ID == 1398){
-    get_template_part("listados/guias");
-  }
 
 ?>
  

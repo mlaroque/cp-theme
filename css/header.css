@@ -1,6 +1,10 @@
-/**HEADER B CSS**/
 header {
-  margin-bottom: 10px;
+	margin: 0;
+	border-bottom: 1px solid #e6eaf2;
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	background: #fff;
 }
 .navbar {
   position: relative;
@@ -12,7 +16,7 @@ header {
   align-items: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 0;
   width: 100%;
 }
 .navbar .container,
@@ -60,8 +64,8 @@ header {
     position: absolute;
   }
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
   }
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid {
@@ -74,16 +78,17 @@ header {
 }
 
 .logo { 
-    width: 240px;
-    margin: 0; 
+    margin: 0 5px; 
+    width: 220px; 
 }
 @media (min-width: 576px) {
   .logo { 
-    width: 230px; 
+    width: 290px; 
+    margin: 0 5px 0 0; 
   }
 }
 .navbar {
-    padding: 0 10px;
+    padding: 0;
 }
 
 #menu-main {
@@ -94,19 +99,22 @@ header {
 
 #menu-main li a, 
 #menu-main li a:visited { 
-    background: #fff;
-    padding: 12px;
-    color: #626874;
-    margin:0;
+    color: #525252;
+	text-shadow: none;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 600;
+	padding: 10px 15px;
     cursor: pointer;
     float: left;
+    text-decoration: none;
 }
 
 #menu-main li a:hover, 
 #menu-main li a:focus { 
-    background: #ed6a4b;
+    background: transparent;
     text-decoration: none;
-    color: #fff;
+    color: #ff6123;
 }
 .hamburger_wrapper {
     padding: 5px;
@@ -126,7 +134,7 @@ header {
     position: absolute;
     height: 4px;
     width: 100%;
-    background: violet;
+    background: #ff6123;
     border-radius: 4px;
     opacity: 1;
     left: 0;
@@ -151,7 +159,7 @@ header {
 
 #lc_hamburger.close span:nth-child(1) {
     transform: rotate(45deg);
-    background: purple
+    background: #ff6123
 }
 
 #lc_hamburger.close span:nth-child(2) {
@@ -162,7 +170,7 @@ header {
 
 #lc_hamburger.close span:nth-child(3) {
     transform: rotate(-45deg);
-    background: purple
+    background: #ff6123
 }
 
 #lc_nav-menu {
@@ -170,19 +178,27 @@ header {
     top:69px; 
     width: 100%;
     left: 0;
-    transform: translateX(-100vw);
-    opacity: 0;
+    transform: translateX(-150vw);
+    opacity: 1;
     z-index: 10;
-    transition: transform .5s ease, opacity ease .2s;
+/*    transition: transform 0s ease, opacity ease 0s;
+        transition: .5s ease-in-out;
+*/
+
+  transition: .5s ease-in-out;
 }
 
 #lc_nav-menu.now-active {
     transform: translateX(0);
-    transition: transform .5s ease, opacity ease .2s;
+/*    transition: transform 0s ease, opacity ease 0s;
+*/
+            transition: .5s ease-in-out;
+
     opacity: 1;
     background-color: #f4f6f8;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     border: 1px solid #dee2e6 !important;
+
 }
 
 .nav-list {
@@ -226,6 +242,7 @@ header {
 
 #lc_nav-menu li { 
     line-height: normal; 
+    margin-bottom: 0;
 }
 
 ul.sub-menu {
@@ -248,15 +265,15 @@ ul.sub-menu {
 
 .sub-menu li a:hover, 
 .sub-menu li a:focus { 
-    color: #ed6a4b;
+    color: purple;
     text-decoration: none;
 }
 
  .sub-menu {
-    transform: translateY(-100vw);
+    transform: translateY(-150vw);
     opacity: 1;
-    z-index: 10;
-    transition: transform 1s ease, opacity ease 1s;
+    z-index: 2;
+    transition: transform 0.5s ease, opacity ease 0s;
 }
 
 .sub-menu.subActive {
@@ -265,7 +282,7 @@ ul.sub-menu {
      width: 100%;
     left: 0;
     transform: translateY(0);
-    transition: transform 1s ease, opacity ease 1s;
+    transition: transform 0.5s ease, opacity ease 0s;
     opacity: 1;
     background-color: #fcfcfc;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
@@ -273,3 +290,8 @@ ul.sub-menu {
     z-index: 1;
 }
  
+#lc_nav-menu .menu-item-has-children a { background: #fff url(../images/nav-arrow.jpg); background-position: right; background-repeat: no-repeat; padding-right: 12px; background-size: 9%; }
+#lc_nav-menu .menu-item-has-children a:hover { background: transparent url(../images/nav-arrow-w.png); background-position: right; background-repeat: no-repeat; padding-right: 12px; background-size: 9%; }
+#lc_nav-menu .menu-item-has-children .sub-menu a, #lc_nav-menu .menu-item-has-children .sub-menu a.visited, #lc_nav-menu .menu-item-has-children .sub-menu a:hover { background-image: none }
+
+.nav-cotiza a, .nav-cotiza a:visited, .nav-cotiza a:hover, .nav-cotiza a:focus { color: #fff !important; background-color: #00bcd4 !important; }

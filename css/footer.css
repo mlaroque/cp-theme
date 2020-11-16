@@ -1,174 +1,40 @@
-/**FOOTER B CSS**/
-footer { 
-	background:  #fff; 
-	margin-top: 0; 
-	padding-top: 40px; 
-}
-footer h3 { 
-	text-transform: uppercase; 
-	letter-spacing: 0.3em;
-	font-weight: normal;
-}
-footer ul {
-	margin-top: 35px;
-} 
-footer li { 
-	list-style-type: none;
-	margin-bottom: 25px;
- }
-footer li a, footer li a:visited {
-	color: #333030; 
-}
-footer li a:hover, footer li a:focus {  
-	color: #ed6a4b; 
-	text-decoration: none; 
-}
-footer hr { 
-	background: #ddd; 
-}
+footer { background: #858a9f; padding-top: 30px; }
+/******************************* FOOTER **************************************/
+.textwidget a, .textwidget li, .textwidget ul a { color: #eff0f1; padding: 0 5px; text-decoration: none; }
+.textwidget li a:hover, .textwidget li a:focus { color: #fff; text-decoration: none; }
+#widget-footer ul { color: #fff; font-size: 14px; font-weight: 200; padding: 0; list-style: none; line-height: 30px; }
+#widget-footer  li a, #widget-footer li { color: #e2e2e2 !important; text-decoration: none; margin:6px 0; }
+#widget-footer li a:hover, #widget-footer li a:focus { color: #fff; text-decoration: none; }
+.footSub { background: #646878; padding-top: 30px; }
+.footSub ul { color: #e2e2e2; font-size: 14px; font-weight: 200; padding: 0; list-style: none; display: inline; }
+.footSub .textwidget li a, .footSub li { color: #e2e2e2 !important; padding: 0; }
+.footSub li a:hover, .footSub li a:focus { color: #fff; text-decoration: underline; }
+.textwidget.footer-horizontal p { color: #e2e2e2; font-size:14px; padding: 10px 0; margin: 0; font-weight: 200; }
+.textwidget.footer-horizontal li a, .textwidget.footer-horizontal li { color: #fcfcfc; display: none; padding: 0 5px; }
+.textwidget.footer-horizontal li a:hover, .textwidget.footer-horizontal li a:focus { color: #fff; text-decoration: none; }
+.footer-horizontal p { color: #e2e2e2; font-size:14px; padding: 10px 0; margin: 0; font-weight: 200; }
+.footer-horizontal li a, .footer-horizontal li {  display: inline; padding: 0 5px; color: #fcfcfc; }
+.footer-horizontal li a:hover, .footer-horizontal li a:focus { color: #fff; text-decoration: none; }
+.footer-copy p { color: #fff; font-size: 12px; padding: 0; margin: 0; font-weight: 200;text-align: center; }
+.footer-copy .textwidget a, .footer-copy .textwidget a:visited { color: #fff; }
+.footer-copy .textwidget a:hover, .footer-copy .textwidget a:focus { color: #ff4800; }
+.foot { background: #858a9f; padding: 30px 0 0 0; }
+.foot h2 { color: #e2e2e2; font-size: 18px; font-weight: 600; text-transform: uppercase; }
 
+/******************************* NEWSLETTER **************************************/
+.newsletter { background: #646878; padding: 40px 0; }
+.newsletter h3 { color: #fff; font-weight: 600; margin: 0 0 3px; } 
+.newsletter p { color: white; font-size: 16px, margin: 0 0 10px; } 
+#mc_embed_signup { background: transparent; }
+#mc-embedded-subscribe { border-radius:4px; color: #fff; background-color: #ff6123; border-color: #ff6123; }
+#mc-embedded-subscribe:focus, #mc-embedded-subscribe.focus,
+#mc-embedded-subscribe:hover { color: #fff; background-color: #ff4800; border-color: #ff4800; }
+input#mce-EMAIL, input#mc-embedded-subscribe { margin: 10px 0; border-radius: 4px; }
 
-.foot { 
-	padding-top: 40px; 
-	padding-bottom: 30px; 
-	margin: 20px auto;
-	}
-.foot ul { 
-	padding: 0; 
-	}
-.foot li { 
-	padding: 0; 
-	margin: 0; 
-	font-size: 12px; 
-	color: #7d7b8d; 
-	font-weight: normal; 
-	line-height: normal; 
-	list-style-type: none; 
-	display: inline; 
-	width: 24%; 
-	}
-.foot li:after { 
-	content: ","; 
-	}
-.foot li:last-child:after { 
-	content: " "; 
-	}
-.foot li a { 
-	padding: 8px 0;
-	margin:5px 0; 
-	}
+/******************************* PAYMENTS **************************************/
+.payments { background: #f4f6f8; padding: 20px 0; }
+.payments h3 { color: #646878; font-size: 16px; text-transform: uppercase; letter-spacing: 5px !important; margin-bottom: 13px; } 
+.payments p { color: #646878; font-size: 16px; margin:0 auto; } 
+.payments img { margin: 3px; }
 
-.foot h2, 
-.footHori h2, 
-.copy h2, 
-.footSx h2, 
-.footDx h2 { 
-	text-transform: uppercase; 
-	letter-spacing: 0.3em;
-	color: #6d6b7d;
-	font-size: 1em;
-	font-weight: normal; 
-	margin-top: 30px; 
-	text-align: center; 
-	}
-
-.footSx h2 { 
-	text-align: left;
-	}
-.footSx ul, .footDx ul { 
-	padding: 0; 
-	text-align: center;
-	}
-.footSx li { 
-	display: inline-flex; 
-	}
-
-.footDx h2 { 
-	text-align: right;
-	}
-.footDx li {
-	display: inline-flex;
-	}
-.footSx li a, 
-.footSx li a:visited, 
-.footDx li a, 
-.footDx li a:visited {
-	color: #7d7b8d;
-	font-size: 14px; 
-	padding: 2px 0; 
-	margin:2px;
-	}
-.footSx li a:hover,
-.footSx li a:focus,
-.footDx li a:hover,
-.footDx li a:focus {
-	color: #ed6a4b;
-	text-decoration: none;
-	}
-
-@media (min-width: 768px){
-.foot li:after { 
-	content: none;
-	}
-.foot li:last-child:after { 
-	content: none; 
-	}
-.footSx ul {
-	text-align: left;
-	}
-.footDx ul {
-	text-align: right;
-	}
-.footSx li a, 
-.footSx li a:visited, 
-.footDx li a, 
-.footDx li a:visited { 
-	padding: 10px 0; 
-	margin:4px;
-	}
-.footHori ul li,
-.foot li {
-	display: inline-flex;
-	}
-}
-.footClaim  { 
-	color: #333030; 
-}
-.copy { 
-	color: #333030; 
-}
-.copy a, .copy a:visited { 
-	color: #333030; 
-}
-.copy a:hover, .copy a:focus { 
-	color: #333030; 
-}
-.footHori { 
-	background: #f3f3f3; 
-	margin: 30px 0; 
-}
-.footHori a, .footHori a:visited { 
-	color: #707070;
-}
-.copy p { 
-	color: #7d7b8d; 
-	margin: 30px 0; 
-	font-size: 14px;
-	}
-.footHori .col-12 {
-    	border-top: 1px solid #ddd;
-    	border-bottom: 1px solid #ddd;
-	}
-.footHori ul { 
-	padding: 0;
-	margin:15px auto;
-	}
-
-.footHori a:hover,
-.footHori a:focus { 
-	color: #ed6a4b; 
-	}
-.footHori li { 
-	margin:5px; 
-	display: inline;
-	}
+input { padding: 10px; width: 100%; font-size: 17px; border: 1px solid #aaaaaa; }
